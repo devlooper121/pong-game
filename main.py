@@ -7,6 +7,14 @@ import time
 screen = Screen()
 screen.setup(width=800, height=600)
 screen.title("Pong Game!")
+wmsg = textinput("Welcome to The Classic Pong Game", "Do you want play the game ? [y/n]")
+game_on = True
+if wmsg != "y":
+    game_on = False
+
+def quit_game():
+    screen.bye()
+
 screen.tracer(0)
 
 ball = Ball()
@@ -21,6 +29,8 @@ screen.onkey(fun=r_paddle.up, key="Up")
 screen.onkey(fun=r_paddle.down, key="Down")
 screen.onkey(fun=l_paddle.up, key="w")
 screen.onkey(fun=l_paddle.down, key="s")
+screen.onkey(fun=quit_game, key="q")
+
 speed = 0.1
 game_on = True
 while game_on:
