@@ -23,11 +23,11 @@ class SmartBoard:
         l.begin_fill()
         l.fd(400)
         l.lt(90)
-        l.fd(600)
+        l.fd(400)
         l.lt(90)
         l.fd(400)
         l.lt(90)
-        l.fd(600)
+        l.fd(400)
         l.end_fill()
 
     def r_part(self):
@@ -39,11 +39,11 @@ class SmartBoard:
         r.begin_fill()
         r.fd(400)
         r.lt(90)
-        r.fd(600)
+        r.fd(400)
         r.lt(90)
         r.fd(400)
         r.lt(90)
-        r.fd(600)
+        r.fd(400)
         r.end_fill()
 
     def clear(self):
